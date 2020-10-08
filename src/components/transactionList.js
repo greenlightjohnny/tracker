@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { scryRenderedDOMComponentsWithTag } from "react-dom/test-utils";
+
 import { GlobalContext } from "../context/GlobalState";
 import { Transaction } from "./Transaction";
 

@@ -15,7 +15,7 @@ export const Incomeex = () => {
   const negative = transactions
     .filter((i) => i.amount < 0)
     .map((i) => i.amount);
-  console.log();
+
   const totalPositive = positive.reduce((a, b) => (a += b), 0).toFixed(2);
   const totalNegative = Math.abs(
     negative.reduce((a, b) => (a += b), 0).toFixed(2)
