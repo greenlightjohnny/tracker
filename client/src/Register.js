@@ -1,7 +1,7 @@
 import React from "react";
 import "./register.css";
 
-export default function Register() {
+export const Register = () => {
   return (
     <div>
       <form>
@@ -16,4 +16,4 @@ export default function Register() {
       </form>
     </div>
   );
-}
+};

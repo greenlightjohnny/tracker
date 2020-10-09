@@ -9,7 +9,7 @@ import { AddTransaction } from "./components/addTransaction";
 import { GlobalProvider } from "./context/GlobalState";
 import "./App.css";
 import { Main } from "./Main";
-import Register from "./register";
+import { Register } from "./Register";
 
 function App() {
   return (
