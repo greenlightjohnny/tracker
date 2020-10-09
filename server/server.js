@@ -35,9 +35,9 @@ app.use("/api/v1/transactions", transactions);
 //     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
 //   );
 // }
-app.get("/", (req, res) => {
-  res.send("Hello from Express!");
-});
+// app.get("/", (req, res) => {
+//   res.send("Hello from Express!");
+// });
 const PORT = process.env.PORT;
 console.log(PORT);
 app.listen(
