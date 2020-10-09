@@ -11,6 +11,10 @@ const transactions = require("./routes/transactions");
 const app = express();
 app.use(express.json());
 
+if (process.env.NODE_ENV === "development") {
+  app.use(morgan("dev"));
+}
+
 //app.get("/", (req, res) => res.send("hello"));
 //Replaced with ./routes
 

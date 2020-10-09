@@ -11,8 +11,8 @@ export const AddTransaction = () => {
     e.preventDefault();
     console.log(typeof amount);
     const newTrans = {
-      id: nanoid(),
-      tex: text,
+      //_id: nanoid(),
+      text: text,
       amount: amount,
     };
 
