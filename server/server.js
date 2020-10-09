@@ -2,6 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const colors = require("colors");
 const morgan = require("morgan");
+const path = require("path");
 const connectDB = require("./config/db.js");
 
 dotenv.config({ path: "./config/config.env" });
@@ -21,6 +22,13 @@ if (process.env.NODE_ENV === "development") {
 ///when a request is made to /api/v1/transactions, connect it to the ./routes/transactions route
 app.use("/api/v1/transactions", transactions);
 
+//Check for production, below routes
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+  app.get("*", (req, res) =>
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
+  );
+}
 const PORT = process.env.PORT;
 console.log(PORT);
 app.listen(
