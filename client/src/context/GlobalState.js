@@ -18,7 +18,9 @@ export const GlobalProvider = ({ children }) => {
   ///actions
   async function getTransactions() {
     try {
-      const res = await axios.get("https://trakie.herokuapp.com/");
+      const res = await axios.get(
+        "https://trakie.herokuapp.com/api/v1/transactions"
+      );
 
       dispatch({
         type: "GET_TRANSACTIONS",
@@ -35,7 +37,9 @@ export const GlobalProvider = ({ children }) => {
   ///Actions (makes calls to reducer)
   async function deleteTransaction(id) {
     try {
-      await axios.delete(`https://trakie.herokuapp.com/${id}`);
+      await axios.delete(
+        `https://trakie.herokuapp.com/api/v1/transactions${id}`
+      );
 
       dispatch({
         type: "DELETE_TRANSACTION",
@@ -58,7 +62,7 @@ export const GlobalProvider = ({ children }) => {
     };
     try {
       const res = await axios.post(
-        "https://trakie.herokuapp.com/",
+        "https://trakie.herokuapp.com/api/v1/transactions",
         transaction,
         config
       );
