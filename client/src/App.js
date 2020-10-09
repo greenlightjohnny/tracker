@@ -16,8 +16,8 @@ function App() {
     <GlobalProvider>
       <BrowserRouter>
         <Switch>
-          <Route path="/" exact component={Main} />
           <Route path="/register" component={Register} />
+          <Route exact path="/" component={Main} />
         </Switch>
       </BrowserRouter>
     </GlobalProvider>
