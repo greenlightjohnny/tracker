@@ -6,12 +6,16 @@ const path = require("path");
 var cors = require("cors");
 const connectDB = require("./config/db.js");
 
+const corsOptions = {
+  origin: "https://trakie.netlify.app/",
+};
+
 dotenv.config({ path: "./config/config.env" });
 
 connectDB();
 const transactions = require("./routes/transactions");
 const app = express();
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 if (process.env.NODE_ENV === "development") {
