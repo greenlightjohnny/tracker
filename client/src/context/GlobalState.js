@@ -38,7 +38,7 @@ export const GlobalProvider = ({ children }) => {
   async function deleteTransaction(id) {
     try {
       await axios.delete(
-        `https://trakie.herokuapp.com/api/v1/transactions${id}`
+        `https://trakie.herokuapp.com/api/v1/transactions/${id}`
       );
 
       dispatch({
