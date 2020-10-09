@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Header } from "./components/header";
 import { Balance } from "./components/balance";
 import { Incomeex } from "./components/incomeex";
@@ -14,10 +14,12 @@ import { Register } from "./Register";
 function App() {
   return (
     <GlobalProvider>
-      <Switch>
-        <Route exact path="/" component={Main} />
-        <Route path="/register" component={Register} />
-      </Switch>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Main} />
+          <Route path="/register" component={Register} />
+        </Switch>
+      </BrowserRouter>
     </GlobalProvider>
   );
 }
