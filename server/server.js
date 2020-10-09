@@ -7,7 +7,7 @@ var cors = require("cors");
 const connectDB = require("./config/db.js");
 
 const corsOptions = {
-  origin: "https://trakie.netlify.app/",
+  origin: "https://trakie.netlify.app",
 };
 
 dotenv.config({ path: "./config/config.env" });
